@@ -74,5 +74,18 @@ npm run dev
 ```bash
 http://localhost:5173
 ```
-You’ll see NoteX running!
+You’ll see *NoteX* running!
+---
+## 💾 How It Works
+- When the app loads, it checks localStorage for existing notes.
+- You can type a title and description, then click Submit.
+- The note appears instantly on the screen.
+- It’s also saved in your browser, so if you refresh, it stays.
+- Click the 🗑️ icon to delete a note; it disappears from both the screen and storage.
+---
+## 🎯 Demo Preview
 
+Here’s what the app looks like 👇
+
+![NoteX Home Page](./images/home.png)
+![NoteX Notes View](./images/notes.png)
