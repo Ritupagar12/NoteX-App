@@ -9,18 +9,20 @@ dotenv.config(); // Load .env file
 const app = express(); // Create Express app
 
 // Middleware
-app.use(cors({
-  origin: '*' // or your frontend URL
-}));
+app.use(cors()); // // Allow all origins for now, or restrict to frontend URL
 app.use(express.json()); // Parse JSON in request bodies
 
 // Routes 
 app.use('/api/notes', notesRouter); // All requests to /api/notes go to notesRouter
 
+// Port and Mongo URI
+const PORT = process.env.PORT || 5000;
+const MONGO_URI = process.env.MONGO_URI;
+
 // Connect to MongoDB 
-mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(MONGO_URI)
   .then(() => {
-    console.log('MongoDB connected'); // Connection successful
-    app.listen(process.env.PORT, () => console.log(`Server running on port ${process.env.PORT}`)); // Start server
+    console.log('MongoDB connected');
+    app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
   })
-  .catch(err => console.log(err)); // Handle connection errors
+  .catch(err => console.log('MongoDB connection error:', err));

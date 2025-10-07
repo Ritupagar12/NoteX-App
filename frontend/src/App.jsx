@@ -5,7 +5,7 @@ import Card from '../components/Card'
 import axios from 'axios';
 
 // Backend API base URL
-const API_URL = "https://notex-app-backend.onrender.com";
+const API_URL = "http://localhost:5000/api/notes";
 
 function App() {
   const [notes, setNotes] = useState([]) // State to store all notes
