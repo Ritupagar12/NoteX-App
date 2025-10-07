@@ -1,0 +1,392 @@
+/* Navbar */
+/* Navbar layout */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 10px 20px;
+  border-bottom: 2px solid #eee;
+}
+
+/* Logo styling */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #222;
+  margin: 0;
+}
+
+/* Search bar */
+.search-container {
+  position: relative;
+  width: 250px; /* control width */
+}
+
+.search-input {
+  width: 100%;
+  padding: 8px 30px 8px 10px; /* leave space for the clear button */
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.clear-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333; /* visible always */
+  padding: 0;
+}
+
+
+.search-input::placeholder {
+  color: #555;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #444;
+}
+
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+}
+
+nav ul li {
+  list-style: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: #666;
+  transition: color 0.2s ease;
+}
+
+nav ul li:hover {
+  color: #1a1a1a;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #1a1a1a;
+}
+
+/* Main */
+main {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 1.5rem;
+}
+
+/* Form */
+form {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #f0f0f0;
+  margin-bottom: 3rem;
+}
+
+form > div {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  font-size: 14px;
+}
+
+input[type='text'],
+textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  background: #ffffff;
+  font-family: inherit;
+}
+
+input[type='text']:focus,
+textarea:focus {
+  outline: none;
+  border-color: #1a1a1a;
+  box-shadow: 0 0 0 3px rgba(26, 26, 26, 0.05);
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+button {
+  background: #1a1a1a;
+  color: white;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background: #333;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Notes Section */
+.noteSection {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem 3rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* Card */
+.card {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #f0f0f0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Card Header: Title + Star + Buttons */
+.card-header {
+  display: flex;
+  justify-content: space-between; /* left: title+star, right: buttons */
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* space between title and star */
+}
+
+.title-container .title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  line-height: 1; /* ensures vertical alignment */
+}
+
+.title-container .star {
+  font-size: 20px;
+  display: flex;
+  align-items: center; /* center the star with text */
+  cursor: pointer;
+}
+
+/* Card Buttons */
+.card-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.card-buttons .edit,
+.card-buttons .del {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.card-buttons .edit:hover {
+  background: rgba(0, 128, 255, 0.1);
+  color: #007bff;
+}
+
+.card-buttons .del:hover {
+  background: rgba(231, 76, 60, 0.1);
+  color: #e74c3c;
+}
+
+/* Card Description */
+.card .desc {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #666;
+  text-align: left;
+  flex-grow: 1;
+  word-wrap: break-word;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.tabs button {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #1a1a1a;
+  background: transparent;
+  color: #1a1a1a;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.tabs button:hover {
+  background: rgba(26, 26, 26, 0.1); /* subtle hover effect */
+}
+
+.tabs button.active {
+  background: #1a1a1a;
+  color: #fff;
+  border-color: #1a1a1a;
+}
+
+/* Checkbox spacing */
+form div label input[type='checkbox'] {
+  margin-right: 0.5rem;
+}
+
+/* Success Message */
+.success-message {
+  margin-top: 1rem;
+  color: green;
+  font-weight: 500;
+}
+
+/* Empty Container Placeholder */
+.container > div:last-child:not(.card) {
+  grid-column: 1 / -1;
+  padding: 3rem;
+  color: #999;
+  font-size: 14px;
+  text-align: center;
+  background: #fafafa;
+  border-radius: 12px;
+  border: 1px dashed #e0e0e0;
+}
+
+.toast {
+  position: fixed;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #222;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  font-size: 14px;
+  opacity: 0;
+  transition: all 0.5s ease;
+  z-index: 1000;
+}
+
+.toast.show {
+  top: 20px;
+  opacity: 1;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  nav {
+    padding: 0 1rem;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  nav ul {
+    gap: 1.5rem;
+  }
+
+  nav ul li {
+    font-size: 13px;
+  }
+
+  main {
+    padding: 2rem 1rem;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  form {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    gap: 0.75rem;
+  }
+
+  .card {
+    padding: 1.25rem;
+  }
+
+  .card-buttons .edit,
+  .card-buttons .del {
+    width: 24px;
+    height: 24px;
+    font-size: 16px;
+  }
+}
