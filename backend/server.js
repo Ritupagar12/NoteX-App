@@ -9,7 +9,9 @@ dotenv.config(); // Load .env file
 const app = express(); // Create Express app
 
 // Middleware
-app.use(cors()); // Allow requests from frontend
+app.use(cors({
+  origin: '*' // or your frontend URL
+}));
 app.use(express.json()); // Parse JSON in request bodies
 
 // Routes 
