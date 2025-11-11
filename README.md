@@ -19,7 +19,7 @@ NoteX is a simple, interactive, and **feature-rich note-taking application** bui
 
 ## 🖥️ Demo
 
-[Live Demo Link Here](#) *(Add your Vercel/Netlify link)*
+[Live Demo Link Here](#)(https://notex-app-fe.onrender.com/)
 
 ---
 
